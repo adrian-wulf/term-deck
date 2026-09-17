@@ -10,13 +10,14 @@
 </p>
 
 <p align="center">
-  <strong>Mobile Command Center & PWA Terminal Hub for iPhone & Desktop Workstations.</strong><br>
-  <em>Monitor, mirror, and control active Kitty, Tmux, WezTerm sessions and 30+ AI coding agents from bed or garden with zero Apple Developer fees.</em>
+  <strong>Mobile Command Center & PWA Terminal Hub for Mobile Devices & Desktop Workstations.</strong><br>
+  <em>Monitor, mirror, and control active terminal sessions (Kitty, Tmux, WezTerm) and 30+ AI coding agents from any device without installing native mobile apps.</em>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-amber.svg?style=for-the-badge" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/Apple_Store_Fee-$0_(PWA)-10b981?style=for-the-badge&logo=apple" alt="Apple Store Fee $0">
+  <img src="https://img.shields.io/badge/Platforms-Linux_%7C_macOS_%7C_Windows-3b82f6?style=for-the-badge" alt="Cross-Platform">
+  <img src="https://img.shields.io/badge/Client-Zero--Install_PWA-10b981?style=for-the-badge" alt="Zero-Install PWA">
   <img src="https://img.shields.io/badge/Remote_Access-Zero--Config_OOTB-0ea5e9?style=for-the-badge&logo=cloudflare" alt="Zero-Config Remote">
   <img src="https://img.shields.io/badge/Terminal_Providers-Kitty_%7C_Tmux_%7C_WezTerm-f97316?style=for-the-badge&logo=gnometerminal" alt="Multi-Terminal Providers">
   <img src="https://img.shields.io/badge/Security-256--bit_Token_%2B_Killswitch-ef4444?style=for-the-badge" alt="Security 256-bit Killswitch">
@@ -55,17 +56,17 @@
 
 When moving a desktop workstation to another room (such as a bedroom) or working outside in the garden, developers running multi-agent LLM coding sessions face a frustrating dilemma:
 
-1. **Apple's $99/year Paywall**: Deploying a custom native iOS app to your personal iPhone 16 Pro Max requires an active Apple Developer Program membership ($99/year), manual Xcode certificate provisioning, and 7-day sideloading expiration limits.
+1. **App Store Friction & Compilation Overhead**: Building or sideloading custom mobile apps requires compiling native code, managing signing certificates, handling updates, and dealing with store restrictions.
 2. **Traditional Mobile SSH Apps are Blind**: Standard SSH clients (Termius, Prompt, Blink) cannot peer into windows and background tasks already running on your physical desktop. They open an isolated new shell session instead of mirroring existing running processes.
-3. **VNC / RDP is Unusable on Touchscreens**: Streaming the entire 4K desktop display to an iPhone results in unreadable micro-fonts, massive bandwidth consumption, awkward mouse emulation, and rapid battery drain.
+3. **VNC / RDP is Unusable on Touchscreens**: Streaming the entire desktop display to a phone results in unreadable micro-fonts, massive bandwidth consumption, awkward mouse emulation, and rapid battery drain.
 4. **Network Hassle Outside Home Wi-Fi**: Accessing your workstation from the garden or on LTE/5G typically involves complex dynamic DNS, opening hazardous router ports, or mandatory third-party accounts.
 
 **TermDeck solves this permanently:**
-* **100% Free PWA (Progressive Web App)**: Add to Home Screen in Safari with zero developer fees. Fullscreen native app feel, Dynamic Island safe-area accommodation, and zero URL bar clutter.
+* **Zero-Install PWA (Progressive Web App)**: Add to Home Screen in Safari or Chrome in 2 taps. Fullscreen standalone experience, Dynamic Island safe-area accommodation, and zero browser chrome.
 * **Non-Invasive Real-Time Desktop Mirroring**: Native IPC hooks into **Kitty**, **Tmux**, and **WezTerm** to stream live ANSI terminal buffers and inject inputs with zero noticeable latency.
 * **AI Agent Registry**: Recognizes over 30 LLM CLI tools (Claude Code, Antigravity, Kimi Code, Codex, DeepCode, JCode, Aider, Goose) and dev servers with automatic process categorization and workspace pills.
-* **Zero-Config Ephemeral Remote Tunneling**: Launch with `pnpm run tunnel` to spin up a secure, encrypted Cloudflare Quick Tunnel without creating any accounts. An ANSI QR code printed in your desktop terminal pairs your iPhone in 2 seconds.
-* **Military-Grade Panic Killswitch**: 256-bit cryptographic token embedded directly in the QR code URL. Any external bot scanning or 3 failed unauthorized attempts instantly **destroys the tunnel** and triggers critical desktop notifications (`notify-send` and native `hyprctl notify`).
+* **Zero-Config Ephemeral Remote Tunneling**: Launch with `pnpm run tunnel` to spin up a secure, encrypted Cloudflare Quick Tunnel without creating any accounts. An ANSI QR code printed in your desktop terminal pairs your mobile device in 2 seconds.
+* **Military-Grade Panic Killswitch**: 256-bit cryptographic token embedded directly in the QR code URL. Any external bot scanning or 3 failed unauthorized attempts instantly **destroys the tunnel** and triggers critical desktop notifications (`notify-send` and desktop alerts).
 * **Designed for Mobile Touch**: Custom touch gestures for canvas scrolling, auto-scroll freeze when reading back-history, double-tap zoom suppression, sticky `Ctrl`/`Alt` modifiers, and a quick-prompt drawer.
 
 ---
@@ -86,16 +87,17 @@ TermDeck is an integral part of an independent suite of developer and business t
 
 ## 📊 Comparison: TermDeck vs Mobile SSH & VNC
 
-| Feature / Capability | Native iOS SSH App | VNC / AnyDesk / RDP | 📱 **TermDeck** (Adrian Wulf) |
+| Feature / Capability | Mobile SSH Apps | VNC / AnyDesk / RDP | 📱 **TermDeck** (Adrian Wulf) |
 | :--- | :---: | :---: | :---: |
 | **Mirror Existing Terminal Sessions** | ❌ No (New shell only) | ⚠️ Clunky GUI stream | **✅ 100% Native ANSI Mirror** |
-| **Apple Developer Account Required** | ❌ Often $99/yr for custom | ❌ Not custom | **✅ $0 (Native iOS PWA)** |
+| **Zero Client Installation** | ❌ App Store app required | ❌ Native app required | **✅ Instant PWA (Safari / Chrome)** |
+| **Cross-Platform Host Support** | Varies | Varies | **✅ Linux, macOS, Windows** |
 | **Resource Usage (Phone Battery & Data)** | Low | High (Constant video stream) | **Ultra Low (WebSocket Text/ANSI)** |
 | **Mobile Touch Ergonomics** | Generic keyboard | Virtual mouse pointer | **Native Touch Bar, Sticky Modifiers** |
 | **AI Coding Agent Awareness** | ❌ None | ❌ None | **✅ 30+ LLM Tools Auto-Detected** |
 | **Remote Access Without Port Forwarding** | Requires VPN / Public IP | Requires 3rd-party accounts | **✅ 1-Command Zero-Config Tunnel** |
 | **Intrusion Protection** | Password only | Account password | **256-bit Token + 3-Strike Killswitch** |
-| **Integrated PTY Shell** | Yes | No | **✅ Built-in Fish / Zsh / Bash PTY** |
+| **Integrated PTY Shell** | Yes | No | **✅ Built-in Shell / PTY** |
 | **Cost & License** | $5–$20/mo or paywalled | Subscriptions | **100% Free MIT License** |
 
 ---
@@ -148,9 +150,9 @@ flowchart TD
 ## 🚀 Quick Start (Local & Remote)
 
 ### Prerequisites
-* Linux (CachyOS, Arch, Ubuntu, Fedora) or macOS
-* Node.js 22+ and `pnpm` (`corepack enable pnpm`)
-* Terminal emulator: **Kitty** (`allow_remote_control yes`), **Tmux**, or **WezTerm**
+* **Host OS**: Linux (Ubuntu, Debian, Arch, Fedora, etc.), macOS, or Windows (PowerShell, WSL2, Windows Terminal, ConEmu)
+* **Runtime**: Node.js 22+ and `pnpm` (`corepack enable pnpm`)
+* **Terminal Emulator / Multiplexer**: **Kitty** (`allow_remote_control yes`), **Tmux**, **WezTerm**, or built-in direct shell PTY
 
 ### Installation
 ```bash
@@ -267,10 +269,10 @@ journalctl --user -u termdeck -f
 </p>
 
 ### What is the RobinHood dev philosophy?
-> **"Developer freedom, ergonomic tooling, and personal workstation sovereignty should never be held hostage by $99/year corporate app store fees or clunky closed ecosystems."**
+> **"Developer freedom, ergonomic tooling, and personal workstation sovereignty should be accessible instantly from any device without proprietary barriers or clunky closed ecosystems."**
 
 **TermDeck was built in the spirit of RobinHood dev:**
-* Giving developers absolute control over their local computing power from any mobile device for $0.
+* Giving developers absolute control over their local computing power from any mobile device or browser for $0.
 * 100% Free and Open Source under the MIT license with zero telemetry, zero accounts, and zero paywalls.
 
 ### How can you help?

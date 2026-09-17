@@ -10,13 +10,14 @@
 </p>
 
 <p align="center">
-  <strong>Mobilne Centrum Dowodzenia & Hub Terminali PWA dla iPhone'a i Stacji Roboczych.</strong><br>
-  <em>Podglądaj bufor na żywo i steruj sesjami Kitty, Tmux, WezTerm oraz ponad 30 agentami AI z łóżka lub ogrodu bez opłat Apple Developer ($99/rok).</em>
+  <strong>Mobilne Centrum Dowodzenia & Hub Terminali PWA dla Smartfonów i Stacji Roboczych.</strong><br>
+  <em>Podglądaj bufor na żywo i steruj sesjami Kitty, Tmux, WezTerm oraz ponad 30 agentami AI z łóżka lub ogrodu bezpośrednio z telefonu lub tabletu bez instalowania zbędnych aplikacji.</em>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/Licencja-MIT-amber.svg?style=for-the-badge" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/Opłata_App_Store-0_zł_(PWA)-10b981?style=for-the-badge&logo=apple" alt="Apple Store Fee $0">
+  <img src="https://img.shields.io/badge/Platformy-Linux_%7C_macOS_%7C_Windows-3b82f6?style=for-the-badge" alt="Cross-Platform">
+  <img src="https://img.shields.io/badge/Klient-Natywne_PWA_(Zero_Instalacji)-10b981?style=for-the-badge" alt="Natywne PWA">
   <img src="https://img.shields.io/badge/Dostęp_Zdalny-Zero--Config_OOTB-0ea5e9?style=for-the-badge&logo=cloudflare" alt="Zero-Config Remote">
   <img src="https://img.shields.io/badge/Dostawcy_Terminali-Kitty_%7C_Tmux_%7C_WezTerm-f97316?style=for-the-badge&logo=gnometerminal" alt="Multi-Terminal Providers">
   <img src="https://img.shields.io/badge/Bezpieczeństwo-Token_256--bit_%2B_Killswitch-ef4444?style=for-the-badge" alt="Security 256-bit Killswitch">
@@ -55,17 +56,17 @@
 
 Podczas przenoszenia stanowiska komputerowego do innego pomieszczenia (np. sypialni) lub pracy na świeżym powietrzu w ogrodzie, deweloperzy pracujący z autonomicznymi agentami LLM stają przed poważnymi barierami:
 
-1. **Płatna blokada Apple ($99/rok)**: Wydanie lub wgranie własnej aplikacji na osobistego iPhone'a 16 Pro Max wymaga corocznego abonamentu Apple Developer ($99/rok), certyfikatów Xcode i ciągłego odnawiania co 7 dni.
+1. **Bariery instalacji aplikacji**: Brak konieczności instalowania dedykowanego oprogramowania ze sklepów z aplikacjami, kompilacji natywnego kodu na telefon czy uciążliwych certyfikatów i profili.
 2. **Tradycyjne aplikacje SSH są ślepe**: Standardowe klienty SSH na telefon (Termius, Prompt, Blink) nie widzą tego, co już działa na monitorze komputera. Tworzą odizolowaną nową sesję shella zamiast pokazywać aktywne procesy stacji roboczej.
-3. **Pulpit Zdalny (VNC / RDP) nie nadaje się na ekran dotykowy**: Przesyłanie strumienia wideo całego pulpitu 4K na iPhone'a oznacza mikroskopijne czcionki, niewygodną emulację kursora myszy, ogromne zużycie transferu i błyskawiczne drenowanie baterii.
+3. **Pulpit Zdalny (VNC / RDP) nie nadaje się na ekran dotykowy**: Przesyłanie strumienia wideo całego pulpitu na telefon oznacza mikroskopijne czcionki, niewygodną emulację kursora myszy, ogromne zużycie transferu i błyskawiczne drenowanie baterii.
 4. **Trudności z siecią poza domowym Wi-Fi**: Dostęp z ogrodu po LTE/5G zwykle wymusza skomplikowaną konfigurację routera, publiczny adres IP lub logowanie do zewnętrznych portali.
 
 **TermDeck rozwiązuje to raz na zawsze:**
-* **W 100% Darmowe PWA (Progressive Web App)**: Zapisz do ekranu początkowego Safari bez ani grosza opłat deweloperskich. Pełny ekran, obsługa Dynamic Island i brak pasków przeglądarki.
+* **Natywne PWA (Progressive Web App)**: Zapisz do ekranu początkowego Safari lub Chrome w 2 kliknięciach. Pełny ekran, obsługa Dynamic Island i brak pasków przeglądarki.
 * **Bezinwazyjny Mirroring bufora w czasie rzeczywistym**: Natywne gniazda IPC w **Kitty**, **Tmux** i **WezTerm** przesyłają strumień kolorów ANSI i przyjmują komendy bez opóźnień.
 * **Rejestr Agentów AI**: Automatycznie rozpoznaje ponad 30 narzędzi LLM (Claude Code, Antigravity, Kimi Code, Codex, DeepCode, JCode, Aider, Goose) oraz serwery deweloperskie z kategoryzacją i etykietami.
-* **Zdalny tunel Out-of-the-Box**: Komenda `pnpm run tunnel` automatycznie uruchamia szyfrowany tunel Cloudflare Quick Tunnel bez potrzeby rejestracji konta ani posiadania domeny. W terminalu komputera pojawia się kod QR (ANSI) gotowy do zeskanowania aparatem iPhone'a.
-* **Wojskowy Panic Killswitch**: 256-bitowy token kryptograficzny zawarty bezpośrednio w kodzie QR. Każda próba skanowania botów lub 3 nieudane próby z zewnątrz natychmiast **niszczą proces tunelu** i wysyłają powiadomienie na pulpit Linuxa (`notify-send` oraz natywny `hyprctl notify`).
+* **Zdalny tunel Out-of-the-Box**: Komenda `pnpm run tunnel` automatycznie uruchamia szyfrowany tunel Cloudflare Quick Tunnel bez potrzeby rejestracji konta ani posiadania domeny. W terminalu komputera pojawia się kod QR (ANSI) gotowy do zeskanowania aparatem telefonu.
+* **Wojskowy Panic Killswitch**: 256-bitowy token kryptograficzny zawarty bezpośrednio w kodzie QR. Każda próba skanowania botów lub 3 nieudane próby z zewnątrz natychmiast **niszczą proces tunelu** i wysyłają powiadomienie na pulpit (`notify-send` oraz alerty systemowe).
 * **Zaprojektowany pod ergonomię dotykową**: Wyłączony podwójny klik przybliżający ekran, płynny gest swipe po canvasie xterm, blokada wyrywania ekranu przy przeglądaniu historii, sticky `Ctrl`/`Alt` i szuflada szybkich promptów.
 
 ---
@@ -87,9 +88,9 @@ TermDeck jest częścią niezależnego ekosystemu narzędzi programistycznych i 
 ## 🚀 Szybki Start (Lokalnie & Zdalnie)
 
 ### Wymagania wstępne
-* Linux (CachyOS, Arch, Ubuntu, Fedora) lub macOS
-* Node.js 22+ oraz `pnpm`
-* Terminal: **Kitty** (`allow_remote_control yes`), **Tmux** lub **WezTerm**
+* **System operacyjny hosta**: Linux (Ubuntu, Debian, Arch, Fedora itp.), macOS lub Windows (PowerShell, WSL2, Windows Terminal, ConEmu)
+* **Środowisko**: Node.js 22+ oraz `pnpm`
+* **Terminal / Multiplekser**: **Kitty** (`allow_remote_control yes`), **Tmux**, **WezTerm** lub wbudowany bezpośredni shell PTY
 
 ### Instalacja
 ```bash
@@ -118,7 +119,7 @@ pnpm run tunnel
 ```
 * Uruchamia automatyczny, bezpieczny tunel Cloudflare Quick Tunnel.
 * Generuje **kod QR** bezpośrednio w konsoli.
-* Skieruj aparat iPhone'a na kod QR — strona otworzy się natychmiast zalogowana tokenem 256-bitowym.
+* Skieruj aparat telefonu na kod QR — strona otworzy się natychmiast zalogowana tokenem 256-bitowym.
 * Wybierz **Udostępnij** -> **Do ekranu początkowego**, aby zainstalować natywne PWA.
 
 ---
@@ -131,10 +132,10 @@ pnpm run tunnel
 </p>
 
 ### Czym jest filozofia RobinHood dev?
-> **"Wolność programisty, ergonomia pracy i suwerenność nad własną stacją roboczą nigdy nie powinny być zakładnikami 99-dolarowych korporacyjnych opłat rocznych ani zamkniętych ekosystemów."**
+> **"Wolność programisty, ergonomia pracy i suwerenność nad własną stacją roboczą powinny być dostępne natychmiast z każdego urządzenia, bez barier i zamkniętych ekosystemów."**
 
 **TermDeck powstał w duchu RobinHood dev:**
-* Zapewnienie programistom pełnej kontroli nad mocą obliczeniową ich komputerów z dowolnego urządzenia mobilnego za 0 zł.
+* Zapewnienie programistom pełnej kontroli nad mocą obliczeniową ich komputerów z dowolnego urządzenia mobilnego lub przeglądarki za 0 zł.
 * W 100% darmowy kod open-source na licencji MIT, bez telemetrii, bez kont i bez ukrytych opłat.
 
 ### Jak możesz pomóc?
