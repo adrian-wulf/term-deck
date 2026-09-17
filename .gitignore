@@ -1,0 +1,24 @@
+# Node dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+dist/
+
+# Local TLS certs and secrets
+certs/
+*.pem
+*.key
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

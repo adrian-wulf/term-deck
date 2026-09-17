@@ -1,0 +1,37 @@
+{
+  "name": "term-deck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "tsx watch src/server/index.ts",
+    "build": "vite build",
+    "start": "tsx src/server/index.ts",
+    "start:tunnel": "tsx src/server/index.ts --tunnel",
+    "tunnel": "tsx src/server/index.ts --tunnel"
+  },
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-pty": "^1.1.0",
+    "qrcode": "^1.5.4",
+    "untun": "^0.2.2",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.3",
+    "@types/qrcode": "^1.5.6",
+    "@types/ws": "^8.18.1",
+    "@xterm/addon-canvas": "^0.7.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

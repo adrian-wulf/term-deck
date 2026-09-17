@@ -1,0 +1,16 @@
+[Unit]
+Description=TermDeck - Mobile Terminal Hub for Kitty
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/mnt/dane/projekty/term-deck
+ExecStart=/mnt/dane/projekty/term-deck/node_modules/.bin/tsx src/server/index.ts
+Restart=always
+RestartSec=3
+Environment=PORT=3000
+Environment=HTTPS_PORT=3443
+Environment=TERMDECK_PIN=1337
+
+[Install]
+WantedBy=default.target
