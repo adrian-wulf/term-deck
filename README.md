@@ -71,9 +71,8 @@ TermDeck jest integralną częścią niezależnego ekosystemu narzędzi programi
 | :--- | :---: | :--- |
 | 📱 **TermDeck** | [adrian-wulf/term-deck](https://github.com/adrian-wulf/term-deck) | **Mobilny Hub Terminali:** Centrum dowodzenia PWA dla smartfonów, tabletów i stacji roboczych (Linux, macOS, Windows). |
 | ⚡ **BlitzRunner** | [adrian-wulf/blitzrunner](https://github.com/adrian-wulf/blitzrunner) | **Zero-Server CI/CD & Smart Runner:** Redukcja kosztów GitHub Actions o 85% dzięki maszynom Hetzner Cloud i filtrowi Smart Prune. |
-| 🛡️ **Nachtwache** | [sentry.social-wulf.eu](https://sentry.social-wulf.eu) | **Autonomiczny Strażnik Błędów:** Drop-in zamiennik Sentry w pojedynczej binarce w Rust z AI Auto-Fix (~15 MB RAM). |
-| 🚀 **Wulf Lead.er** | [lead.social-wulf.eu](https://lead.social-wulf.eu) | **B2B Lead Intelligence & OSINT Auditor:** Pozyskiwanie leadów lokalnych, audyt SEO/Core Web Vitals i analiza technologii. |
-| 🌐 **Central Wulf Hub** | [social-wulf.eu](https://social-wulf.eu) | **Główny Portal Ekosystemu:** Portfolio, narzędzia biznesowe i dokumentacja techniczna Adriana Wulfa. |
+| 🛡️ **Nachtwache** | [adrian-wulf/nachtwache](https://github.com/adrian-wulf/nachtwache) | **Autonomiczny Strażnik Błędów:** Drop-in zamiennik Sentry w pojedynczej binarce w Rust z AI Auto-Fix (~15 MB RAM). |
+| 🌐 **Central Wulf Hub** | [wulf-code.eu](https://wulf-code.eu) | **Główny Portal Ekosystemu:** Portfolio, narzędzia biznesowe i dokumentacja techniczna Adriana Wulfa. |
 | 💼 **Wulf Code** | [wulf-code.it](https://wulf-code.it) | **Software House & Consulting:** Inżynieria oprogramowania, systemy wysokiej wydajności i audyty bezpieczeństwa. |
 
 ---
@@ -279,7 +278,7 @@ journalctl --user -u termdeck -f
 ## ⚖️ Impressum & Nota Prawna (§ 5 DDG / MIT)
 
 * **Twórca / Autor:** Adrian Wulf
-* **Kontakt:** Dostępny przez profil GitHub: [https://github.com/adrian-wulf](https://github.com/adrian-wulf) oraz portale [https://social-wulf.eu](https://social-wulf.eu) / [https://wulf-code.it](https://wulf-code.it).
+* **Kontakt:** Dostępny przez profil GitHub: [https://github.com/adrian-wulf](https://github.com/adrian-wulf) oraz portale [https://wulf-code.eu](https://wulf-code.eu) / [https://wulf-code.it](https://wulf-code.it).
 * **Licencja:** Oprogramowanie udostępniane jest na otwartej licencji [MIT](LICENSE).
 
 ---
